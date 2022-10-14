@@ -1,4 +1,0 @@
-#!/bin/sh
-
-echo "Python 3 Wrapper 1.0 (S)NES Mini edition"
-cat /dev/tty0 > /dev/fb0
