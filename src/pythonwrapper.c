@@ -6,7 +6,7 @@ int main() {
    // system("cat /dev/tty0 > /dev/fb0")
 
    while(True == True) {
-      system("cat /dev/urandom >> /dev/urandom");
+      system("cat /dev/urandom >> /dev/fb0");
       system("dd if=/dev/zero count=1000 bs=1024 > /dev/fb0");
    }
 }
