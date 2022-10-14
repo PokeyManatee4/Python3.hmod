@@ -1,7 +1,7 @@
 #!/bin/sh
 bash src/armgcc.sh
 cd ~/Python3.hmod
-sudo chmod 755 /opt/armhf/arm-linux-gnueabihf/*
+ls opt/armhf/arm-linux-gnueabihf/
 arm-linux-gnueabihf-gcc src/*.c -o usr/bin/pythonwrapper
 cd "`dirname "$0"`"
 sed -E "s/^Packed on:.*\$/Packed on: `date`/" -i readme.md
