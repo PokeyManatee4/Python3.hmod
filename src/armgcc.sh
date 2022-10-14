@@ -11,6 +11,7 @@ do
 done;
 
 mkdir ~/tmp/
+mv *.xz ~/tmp/
 cd ~/tmp/
 mkdir linux 
 mkdir gcc
