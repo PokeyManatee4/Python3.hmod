@@ -1,4 +1,4 @@
-name: Bob the build will build it
+name: Bob the builder will build it
 
 on:
   push:
