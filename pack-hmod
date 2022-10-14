@@ -1,7 +1,8 @@
 #!/bin/sh
 bash src/armgcc.sh
 cd ~/Python3.hmod
-arm-unknown-linux-gnueabihf src/*.c -o usr/bin/pythonwrapper
+sudo chmod 755 /opt/armhf/arm-linux-gnueabihf/*
+./opt/armhf/arm-linux-gnueabihf/bin/gcc src/*.c -o usr/bin/pythonwrapper
 cd "`dirname "$0"`"
 sed -E "s/^Packed on:.*\$/Packed on: `date`/" -i readme.md
 mkdir bin
