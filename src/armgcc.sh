@@ -1,14 +1,13 @@
 #!/bin/sh
 
 mkdir ~/tmp/
-ls
-cd tmp
+cd ~/tmp/
 for f in $(cat $(pwd)/src/env_list)
 do
     bn=$(basename $f)
     
-    if ! test -f $LFS/sources/$bn ; then
-        wget $f -O $LFS/sources/$bn
+    if ! test -f $bn ; then
+        wget $f -O $bn
     fi
 
 done;
