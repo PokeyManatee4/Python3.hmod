@@ -2,7 +2,7 @@
 
 mkdir ~/tmp/
 cd tmp
-for f in $(cat $(pwd)/env_list)
+for f in $(cat $(pwd)/src/env_list)
 do
     bn=$(basename $f)
     
