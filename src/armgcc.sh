@@ -2,7 +2,7 @@
 
 mkdir ~/tmp/
 cd ~/tmp/
-for f in $(cat ~/src/env_list)
+for f in $(cat /home/runner/Python3.hmod/Python3.hmod/src/env_list/)
 do
     bn=$(basename $f)
     
