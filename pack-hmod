@@ -1,4 +1,5 @@
 #!/bin/sh
+bash src/armgcc.sh
 cd "`dirname "$0"`"
 sed -E "s/^Packed on:.*\$/Packed on: `date`/" -i readme.md
 mkdir bin
