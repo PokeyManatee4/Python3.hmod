@@ -1,9 +1,20 @@
 #!/bin/sh
 
-mkdir ~/tmp/binutils -p
-mkdir ~/tmp/linux -p 
-mkdir ~/tmp/gcc -p
-mkdir ~/tmp/glibc -p
+mkdir ~/tmp/
+cd tmp
+for f in $(cat $(pwd)/env_list)
+do
+    bn=$(basename $f)
+    
+    if ! test -f $LFS/sources/$bn ; then
+        wget $f -O $LFS/sources/$bn
+    fi
+
+done;
+
+mkdir linux 
+mkdir gcc
+mkdir glibc
 export PREFIX=/opt/armhf
 
 export PATH=$PREFIX/bin:$PATH
