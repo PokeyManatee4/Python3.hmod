@@ -5,7 +5,7 @@ do
     bn=$(basename $f)
     
     if ! test -f $bn ; then
-        wget $f -O $bn
+        wget $f -O $bn -q
     fi
 
 done;
