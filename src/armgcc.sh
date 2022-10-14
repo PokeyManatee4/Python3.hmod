@@ -13,9 +13,14 @@ done;
 mkdir ~/tmp/
 mv *.xz ~/tmp/
 cd ~/tmp/
-mkdir linux 
-mkdir gcc
-mkdir glibc
+tar -xf binutils-2.36.1.tar.xz
+mv binutils-2.36.1 binutils
+tar -xf gcc-10.2.0.tar.xz
+mv gcc-10.2.0 gcc
+tar -xf glibc-2.33.tar.xz
+mv glibc-2.33.tar.xz glibc
+tar -xf linux-5.10.17.tar.xz
+mv linux-5.10.17 linux
 export PREFIX=/opt/armhf
 
 export PATH=$PREFIX/bin:$PATH
