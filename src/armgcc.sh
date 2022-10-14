@@ -1,6 +1,7 @@
 #!/bin/sh
 
 mkdir ~/tmp/
+ls
 cd tmp
 for f in $(cat $(pwd)/src/env_list)
 do
