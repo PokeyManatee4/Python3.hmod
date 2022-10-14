@@ -1,0 +1,25 @@
+name: Bob the build will build it
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build
+        run: bash pack-hmod
+
+      - name: Download Output
+        uses: actions/upload-artifact@v2
+        with:
+          name: Python3.hmod
+          path: bin/*.hmod
