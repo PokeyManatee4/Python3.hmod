@@ -1,6 +1,6 @@
 #!/bin/sh
 
-for f in $(cat src/env_list/)
+for f in $(cat src/env_list)
 do
     bn=$(basename $f)
     
